@@ -4,32 +4,14 @@
 
 本项目利用嵌入式视觉算法对摄像头采集图像进行实时处理，实现目标识别、锁定、跟踪，并通过 UART 串口将目标坐标发送至 MCU，用于后续运动控制或激光追踪应用。
 
+基于maixvision 编译器，可自行在宏定义修改参数以达到自己想要的效果，该代码返回的x,y 值是基于坐标原点为摄像头屏幕的左上角，返回的w，h 值是识别到目标矩形的宽和高
 
-## ✨ Features
-
-- 📷 Real-time image acquisition using MaixCamPro camera
-- 🔍 OpenCV-based target detection
-- 🎯 Automatic target locking and tracking
-- 📉 EMA filtering for coordinate smoothing
-- 🚀 Motion prediction when target is temporarily lost
-- ⚡ UART communication with MCU
-- 🖥️ Real-time display of tracking results
+如何实现脱机运行：
+  将此代码放入maixvision 中打开，现用数据线将摄像头和电脑连接，确保二者相连接之后，点击运行代码，效果合适之后，点击打包成应用，下载进maixcampro中，之后它就会作为一个app
+  存在，之后如果想要一通电就运行，再去设置点击开机自启即可
 
 
-## 🛠️ Hardware
-
-- MaixCamPro AI Camera
-- MCU control board (UART communication)
-- Embedded control system
 
 
-## 💻 Software
 
-- Python
-- OpenCV
-- NumPy
-- MaixPy
-
-
-## 🔧 System Workflow
 
